@@ -25,7 +25,7 @@ const fi = (function() {
       return newArr
     },
 
-  		reduce: function(c = [], callback = () => {}, acc) {
+		reduce: function(c = [], callback = () => {}, acc) {
 		let collection = c.slice(0)
 
 		if (!acc) {
@@ -39,7 +39,7 @@ const fi = (function() {
 			acc = callback(acc, collection[i], collection)
 		}
 		return acc;
-	},
+	 },
 
     functions: function() {
 
