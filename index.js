@@ -73,9 +73,26 @@ first: function(collection, stop=false) {
 
 
 
-    functions: function() {
-
+     functions: function() {
+    first: function(array, n=0){
+      return ((n === 0) ? array[0] : array.slice(0,n));
     },
+
+    last:function(array, n=0){
+      return ((n === 0) ? array.slice(-1)[0] : array.slice(-n));
+    },
+
+    compact:function(array){
+      const compact = [];
+/*try using mapping for this section, lines 75,76*/
+        array.map(item => !!item ? compact.push(item): item)
+        /*for(const item of array){
+          if(!!item){
+            compact.push(item)
+          }*/
+
+        return compact;
+      },
 
 
   }
