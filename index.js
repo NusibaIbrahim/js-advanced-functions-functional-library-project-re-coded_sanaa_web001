@@ -71,7 +71,10 @@ first: function(collection, stop=false) {
       return (stop) ? collection.slice(0, stop) : collection[0]
     },
 
-
+    map: function() {
+    last: function(collection, start=false) {
+      return (start) ? collection.slice(collection.length-start, collection.length) : collection[collection.length-1]
+    },
 
     functions: function() {
 
