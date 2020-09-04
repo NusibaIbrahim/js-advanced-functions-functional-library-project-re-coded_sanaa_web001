@@ -72,7 +72,6 @@ const fi = (function() {
       return (stop) ? collection.slice(0, stop) : collection[0]
     },
 
-    map: function() {
     last: function(collection, start=false) {
       return (start) ? collection.slice(collection.length-start, collection.length) : collection[collection.length-1]
     },
@@ -82,7 +81,6 @@ const fi = (function() {
       return collection.filter(el => !badBad.has(el))
     },
 
-    reduce: function() {
     sortBy: function(collection, callback) {
       const newArr = [...collection]
       return newArr.sort(function(a, b) {
@@ -95,7 +93,6 @@ const fi = (function() {
         receiver.push(val)
     },
 
-    functions: function() {
     flatten: function(collection, shallow, newArr=[]) {
       if (!Array.isArray(collection)) return newArr.push(collection)
       if (shallow) {
