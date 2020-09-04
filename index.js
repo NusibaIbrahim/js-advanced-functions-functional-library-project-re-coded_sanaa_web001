@@ -39,7 +39,7 @@ const fi = (function() {
   			acc = callback(acc, collection[i], collection)
   		}
   		return acc;
-	 },
+	 }, 
 	 
 	 find: function(collection, predicate) {
       if (!(collection instanceof Array))
@@ -49,31 +49,6 @@ const fi = (function() {
         if (predicate(collection[idx])) return collection[idx]
 
       return undefined
-    },
-    
-    filter: function(collection, predicate) {
-      if (!(collection instanceof Array))
-        collection = Object.values(collection)
-
-      const newArr = []
-
-      for (let idx = 0; idx < collection.length; idx++)
-        if (predicate(collection[idx])) newArr.push(collection[idx])
-
-      return newArr
-    },
-    
-        size: function(collection) {
-      return (collection instanceof Array) ? collection.length : Object.keys(collection).length
-    },
-
-first: function(collection, stop=false) {
-      return (stop) ? collection.slice(0, stop) : collection[0]
-    },
-
-    map: function() {
-    last: function(collection, start=false) {
-      return (start) ? collection.slice(collection.length-start, collection.length) : collection[collection.length-1]
     },
 
     functions: function() {
